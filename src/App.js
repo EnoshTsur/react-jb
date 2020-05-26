@@ -4,16 +4,11 @@ import Header from './components/Header/Header'
 
 export default function App() {
 
-
-  const [isCool, setCool] = React.useState(true)
+  const [username, setUsername] = React.useState("guest")  
 
   return (
     <div>
-      <Header />
-
-      <button onClick={() => setCool(!isCool)}>
-        toggle cool
-        </button>
+      <Header username={username}/>
     </div>
   )
 }

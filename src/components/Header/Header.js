@@ -1,20 +1,20 @@
 import React from 'react'
 
-export default function Header({ isCool, }) {
+export default function Header({ username, }) {
 
-    // if isCool -> hello yo!! yo!
-    // if not -> bye bye.. 
-
-    /*
-        cool style -> color blue
-        notcool style -> color brown
-    */
+    const [isCool, setCool] = React.useState(true)
 
     return (
-        <h1 style={{
-            color: isCool ? "blue" : "brown"
-        }}>
-            {isCool ? "hello yo!! yo!" : "bye bye"}
-        </h1>
+        <div>
+            <h1 style={{
+                color: isCool ? "blue" : "brown"
+            }}>
+                {isCool ? `hello yo ${username}!! yo!` : `bye bye ${username}`}
+            </h1>
+
+            <button onClick={() => setCool(!isCool)}>
+                toggle cool
+            </button>
+        </div>
     )
 }
