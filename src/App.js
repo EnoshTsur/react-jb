@@ -1,14 +1,21 @@
 import React from 'react';
 import Header from './components/Header/Header'
+import Username from './components/Username/Username'
 
 
 export default function App() {
 
   const [username, setUsername] = React.useState("guest")  
 
+  function setUser(name) {
+    setUsername(name)
+  }
+
   return (
     <div>
       <Header username={username}/>
+      <Username setUser={setUser} />
+
     </div>
   )
 }
