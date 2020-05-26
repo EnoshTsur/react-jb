@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+export default function App({ name, age }) {
+
+  const greetings = `Hello ${name} your age is: ${age}`
+
+  const [isError, setError] = React.useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+      <h1> {greetings} </h1>
+
+      <h2>{ isError ? 'Failure' : 'Success' }</h2>
+
+      <button onClick={() => setError(!isError)}>Toggle Error</button>
     </div>
   );
 }
 
-export default App;
+
+
