@@ -4,11 +4,13 @@ import Header from './components/Header/Header'
 
 export default function App() {
 
+
   const [isCool, setCool] = React.useState(true)
 
   return (
     <div>
-      <Header isCool={isCool} />
+      <Header />
+
       <button onClick={() => setCool(!isCool)}>
         toggle cool
         </button>
