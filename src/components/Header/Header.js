@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Header(){
+export default function Header({ isCool, }) {
 
     // if isCool -> hello yo!! yo!
     // if not -> bye bye.. 
@@ -11,6 +11,10 @@ export default function Header(){
     */
 
     return (
-        <h1></h1>
+        <h1 style={{
+            color: isCool ? "blue" : "brown"
+        }}>
+            {isCool ? "hello yo!! yo!" : "bye bye"}
+        </h1>
     )
 }

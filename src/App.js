@@ -2,17 +2,16 @@ import React from 'react';
 import Header from './components/Header/Header'
 
 
-export default function App(){
+export default function App() {
 
-  
-  // [isCool, setCool]
-
-  // onClick={() => setCool(!isCool)}
+  const [isCool, setCool] = React.useState(true)
 
   return (
     <div>
-      <Header />
-      <button>toggle cool</button>
+      <Header isCool={isCool} />
+      <button onClick={() => setCool(!isCool)}>
+        toggle cool
+        </button>
     </div>
   )
 }
