@@ -4,5 +4,5 @@ import './index.css';
 import App from './App';
 
 
-ReactDOM.render( <App name="Enosh"  age="16" />,document.getElementById('root'));
+ReactDOM.render( <App />,document.getElementById('root'));
 
